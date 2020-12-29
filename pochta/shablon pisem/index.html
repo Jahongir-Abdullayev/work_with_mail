@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="block" id="block">
+            <div class="header">
+
+                <div class="left_side">
+                    <div class="span">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="line"></div>
+                    <div class="header_text">Шаблоны писем</div>
+                </div>
+               
+                <div class="right_side">
+                    <a class="start_mailing" id="link" onclick="show()" href="#">+ Добавить шаблон</a>
+                </div> 
+            </div>
+            <!-- body -->
+            <div class="body">
+                <div class="body_header">
+                    <div class="body_left">
+                        <a href="#" class="body_text">ID</a>
+                        <div class="body_text">Название</div>
+                    </div>
+                    <div class="body_right">
+                        <div class="body_text">HTML</div>
+                        <div class="body_text">Дата создания</div>
+                        <div class="body_text">Действие</div>
+                    </div>
+                </div>
+                <div class="saved_mail">
+                    <div class="mail_left">
+                        <div class="mail_saved">1</div>
+                        <div class="mail_saved">Общий шаблон</div>
+                    </div>
+                    <div class="mail_right">
+                        <label class="checkbox">
+                            <input type="checkbox" id="client">
+                            <span class="checkmark"></span>
+                        </label>
+                        <div class="mail_saved">7 мая 2020</div>
+                        <div class="mail_saved">
+                            <img src="icon/edit.png" title="edit" onclick="show()" alt="">
+                            <div class="delete" title="delete">&#10005;</div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="block1" id="block1">
+            <div class="header1">
+                <div class="icon">
+                    <img src="icon/edit.webp" alt="">
+                </div>
+                <div class="line"></div>
+                <div class="header_text">Добавление шаблона</div>
+            </div>
+            <div class="body">
+               
+                    <div class="from">
+                    <div class="from_text">Название</div>
+                    <input class="input_text" type="text">
+                </div>
+                <div class="from">
+                    <div class="from_text">Сообщение</div>
+                    <div class="textarea">
+                        <textarea name="text" id="textarea" rows="20" ></textarea>
+                        <label class="checkbox">
+                            <input type="checkbox" id="client">Текст сообщения содержит HTML теги:
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="save_btn">Save</button>
+                    <button class="cancel_btn" id="cancel" onclick="cancel()">Cancel</button>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+<script src="js/main.js"></script>    
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap">
+        <!-- first block -->
+        <div class="block" id="block">
+            <!-- header -->
+            <div class="header">
+
+                <div class="left_side">
+                    <div class="span">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="line"></div>
+                    <div class="header_text">Работа с почтой / Список рассылок</div>
+                </div>
+               
+                <div class="right_side">
+                    <div class="drop_num">
+                        <select name="number" id="number">
+                            <option value="20">20</option>
+                            <option value="40">40</option>
+                            <option value="100">100</option>
+                        </select>
+                    </div>
+                    <a class="start_mailing" id="link" onclick="show()" href="#">+ Начать рассылку</a>
+                </div> 
+            </div>
+            <!-- body -->
+            <div class="body">
+                <div class="body_header">
+                    <a href="#" class="body_text">ID</a>
+                    <div class="body_text">Получателей</div>
+                    <div class="body_text">Отправлено</div>
+                    <div class="body_text">Начало</div>
+                    <div class="body_text">Статус</div>
+                    <div class="body_text">Действие</div>
+                </div>
+                <div class="text_place">Nothing found</div>
+            </div>
+        </div>
+        <!-- second block -->
+        <div class="block1" id="block1">
+            <div class="header1">
+                <div class="icon">
+                    <img src="icon/edit.webp" alt="">
+                </div>
+                <div class="line"></div>
+                <div class="header_text">Работа с почтой / Список рассылок</div>
+            </div>
+            <div class="body">
+                <div class="from">
+                    <div class="from_text">От</div>
+                    <input class="input_text" type="text">
+                    <input class="input_text1" type="text">
+                </div>
+                <div class="from">
+                    <div class="from_text">Тема</div>
+                    <input class="input_text2" type="text">
+                </div>
+                <div class="from">
+                    <div class="from_text">Сообщение</div>
+                    <div class="textarea">
+                        <textarea name="text" id="textarea" rows="10"></textarea>
+                        <label class="checkbox">
+                            <input type="checkbox" id="client">Текст сообщения содержит HTML теги:
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="from">
+                    <div class="from_text">Получатели</div>
+                    <div class="radio">
+                        <div class="input_radio">
+                            <input checked type="radio" id="radio" onclick="remove()" name="chose"></input>
+                            <label for="radio">Все</label>
+                        </div>
+                        <div class="input_radio">
+                            <input type="radio" id="radio1" onclick="push()" name="chose"></input>
+                            <label for="radio1">Исполнители</label>
+                        </div>
+                        <div class="input_radio">
+                            <input type="radio" id="radio2" onclick="remove()" name="chose"></input>
+                            <label for="radio2">Заказчики</label>
+                        </div>
+                    </div>
+                    <!-- <div class="radio1" id="radio1">
+                        <div class="input_radio">
+                            <input type="radio" name="chose1">Все</input>
+                        </div>
+                        <div class="input_radio">
+                            <input type="radio" name="chose1">Не PRO</input>
+                        </div>
+                        <div class="input_radio">
+                            <input type="radio" name="chose1">Только PRO</input>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="from">
+                    <div class="from_text">Шаблон</div>
+                    <div class="select">
+                        <select name="shablon" id="shablon">
+                            <option value="">Без Шаблона</option>
+                            <option value="">Общий Шаблон</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="bottom_line"></div>
+            </div>
+            <div class="buttons">
+                <button class="save_btn">Save</button>
+                <button class="cancel_btn" id="cancel" onclick="cancel()">Cancel</button>
+            </div>
+        </div>
+    </div>
+<script src="js/main.js"></script>    
+</body>
+</html>
